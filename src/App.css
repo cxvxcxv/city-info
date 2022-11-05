@@ -1,0 +1,67 @@
+@media (max-width: 370px) {
+  body input {
+    width: 80%;
+  }
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #181927;
+}
+
+body button {
+  background-color: #41ff8d;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 3em;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+body input {
+  background-color: #1f2134;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 16px;
+  height: 50px;
+  color: #41ff8d;
+  font-size: 24px;
+}
+
+body input::placeholder {
+  color: #41ff8d;
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+h1, h2, h4 {
+  color: #41ff8d;
+}
+
+h2 {
+  margin-bottom: 2em;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 13%;
+}
+
+.info {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

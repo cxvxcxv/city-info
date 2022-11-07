@@ -15,7 +15,7 @@ function App() {
     setIsNotAccurate(false);
     setCityInfo({});
     axios
-      .get(`https://api.api-ninjas.com/v1/city?name=${cityName}`, {
+      .get(`https://api.api-ninjas.com/v1/city?name=${cityName.trim()}`, {
         headers: {
           "X-Api-Key": "jEsVXC4mozmrNqP7PxvWxg==M2ky2RqxGDFHZ3iv",
         },
@@ -24,10 +24,10 @@ function App() {
         if (response.data.length) setCityInfo(response.data[0]);
         else setIsCityNotFound(true);
         if (
-          cityName.slice(1, cityName.length) !==
+          cityName.trim().slice(1, cityName.length) !==
           response.data[0].name.slice(1, response.data[0].name.length)
         )
-          setIsNotAccurate(true); //not setting isNotAccurate as true if first letter is not capital
+          setIsNotAccurate(true); //not setting isNotAccurate as true if first letter is not capital and/or a word has spaces
         setIsLoading(false);
       })
       .catch(() => {

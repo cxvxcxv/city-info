@@ -24,8 +24,8 @@ function App() {
         if (response.data.length) setCityInfo(response.data[0]);
         else setIsCityNotFound(true);
         if (
-          cityName.trim().slice(1, cityName.length) !==
-          response.data[0].name.slice(1, response.data[0].name.length)
+          cityName.trim().toLowerCase() !==
+          response.data[0].name.toLowerCase()
         )
           setIsNotAccurate(true); //not setting isNotAccurate as true if first letter is not capital and/or a word has spaces
         setIsLoading(false);
